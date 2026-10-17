@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.env*
+!.env.example
+.dart_tool/
+build/
+android/local.properties
+*.jks
+*.keystore
+.supabase/
+supabase/.temp/
+*.tsbuildinfo
+.idea/
+*.iml

@@ -1,0 +1,42 @@
+name: Verify MVP
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  dashboard-and-database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: true
+      - run: flutter pub get
+        working-directory: apps/student
+      - run: flutter analyze
+        working-directory: apps/student
+      - run: flutter test
+        working-directory: apps/student
+      - run: flutter build apk --debug
+        working-directory: apps/student
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-smoke-build-unconfigured
+          path: apps/student/build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 7

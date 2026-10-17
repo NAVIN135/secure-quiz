@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap");
+:root {
+  color-scheme: light;
+  font-family: "DM Sans", sans-serif;
+  color: #152d2b;
+  background: #f5f7f3;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 42px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid #d7e0d8;
+  padding: 26px 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #156d59;
+  font-size: 25px;
+}
+.brand span {
+  font-size: 20px;
+  color: #152d2b;
+}
+.badge {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-right: auto;
+  color: #527069;
+}
+.intro {
+  padding: 50px 0 32px;
+  max-width: 660px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #527468;
+  font-weight: 700;
+}
+h1 {
+  font-family: Manrope, sans-serif;
+  font-size: 52px;
+  line-height: 1.16;
+  letter-spacing: -2px;
+  margin: 16px 0;
+}
+h1 em {
+  font-style: normal;
+  color: #20775d;
+}
+p {
+  color: #65746d;
+  line-height: 1.65;
+}
+h2 {
+  font-size: 21px;
+  margin-top: 0;
+}
+h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.card {
+  background: white;
+  border: 1px solid #dee6df;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 5px 20px #233b2604;
+}
+.login {
+  max-width: 460px;
+}
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccd8cf;
+  border-radius: 8px;
+  background: #fafcf9;
+  color: #152d2b;
+  font: inherit;
+  margin-top: 7px;
+}
+input:focus,
+select:focus {
+  outline: 2px solid #409476;
+}
+button {
+  border: 1px solid #cddbd0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #fff;
+  color: #245c49;
+  cursor: pointer;
+  font:
+    600 13px "DM Sans",
+    sans-serif;
+}
+button:hover {
+  background: #edf5ee;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.primary {
+  display: block;
+  width: 100%;
+  background: #176e53;
+  color: #fff;
+  margin-top: 22px;
+  padding: 14px;
+}
+.primary:hover {
+  background: #11503c;
+}
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+fieldset {
+  border: 1px solid #dce6dd;
+  border-radius: 10px;
+  padding: 10px 18px;
+  margin: 20px 0;
+}
+legend {
+  color: #386d57;
+  font-size: 13px;
+}
+article {
+  border-top: 1px solid #e6ece5;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+article p {
+  font-size: 13px;
+  margin: 5px 0;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.code {
+  letter-spacing: 3px;
+  color: #176e53;
+  background: #edf4e9;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.count {
+  font-size: 13px;
+  background: #e7f0e4;
+  border-radius: 20px;
+  padding: 4px 9px;
+  margin-left: 6px;
+}
+aside {
+  font-size: 13px;
+  line-height: 1.7;
+  padding: 15px;
+  background: #fff6dc;
+  border-radius: 9px;
+  color: #735e2e;
+}
+.notice {
+  position: sticky;
+  bottom: 20px;
+  background: #173e32;
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+}
+footer {
+  font-size: 12px;
+  color: #718075;
+  padding: 25px 0 40px;
+}
+.table {
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #e6ece5;
+  padding: 12px 5px;
+}
+.results p {
+  font-size: 12px;
+}
+@media (max-width: 800px) {
+  main {
+    padding: 0 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  .badge {
+    display: none;
+  }
+  header {
+    gap: 12px;
+  }
+  header button {
+    margin-left: auto;
+  }
+  .card {
+    padding: 22px;
+  }
+}
